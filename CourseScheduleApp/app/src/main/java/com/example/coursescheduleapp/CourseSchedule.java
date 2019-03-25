@@ -5,12 +5,14 @@ class CourseSchedule {
     private String lectureTopic;
     private String labTopic;
     private String assessment;
+    private String date;
 
-    public CourseSchedule(String weekNumber, String lectureTopic, String labTopic, String assessment) {
+    public CourseSchedule(String weekNumber, String date, String lectureTopic, String labTopic, String assessment) {
         this.scheduleWeek = weekNumber;
         this.lectureTopic = lectureTopic;
         this.labTopic = labTopic;
         this.assessment = assessment;
+        this.date = date;
     }
 
     public String getWeek() {
@@ -43,5 +45,13 @@ class CourseSchedule {
 
     public void setAssessment(String assessment) {
         this.assessment = assessment;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

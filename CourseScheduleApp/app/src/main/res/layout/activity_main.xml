@@ -29,7 +29,7 @@
 
             <TextView
                 android:id="@+id/scheduleWeek"
-                android:layout_width="70sp"
+                android:layout_width="50sp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
@@ -46,12 +46,15 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
                 android:text="Assessment /Other"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@color/cardview_light_background"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/scheduleLectureTopic"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,6 +94,7 @@
         android:layout_height="0dp"
         android:layout_margin="8dp"
         android:layout_marginBottom="723dp"
+        android:background="@color/cardview_dark_background"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
             android:scrollbars="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
