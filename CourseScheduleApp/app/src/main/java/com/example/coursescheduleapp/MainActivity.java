@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<CourseSchedule> getCourseSchedule() {
         ArrayList<CourseSchedule> courseSchedule = new ArrayList<CourseSchedule>();
-        courseSchedule.add(new CourseSchedule("Week", "Activity", "Topic", "Assessment/Other"));
         courseSchedule.add(new CourseSchedule("Week 1: 18 February", "Introduction & Android Fundamentals", "Android Studio, Git & App Basics", "-"));
         courseSchedule.add(new CourseSchedule("Week 2: 25 February", "Activities, Lifecycle & Intents", "Activities & Intents", "-"));
         courseSchedule.add(new CourseSchedule("Week 3: 4 March", "Layouts & UI", "Designing a UI", "-"));
