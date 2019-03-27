@@ -20,18 +20,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Gets course schedule
         courseSchedule = getCourseSchedule();
 
+        // Set up RecyclerView
         RecyclerView recyclerView =  findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
+
+        // Create and set adapter
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(courseSchedule, this);
         recyclerView.setAdapter(adapter);
 
     }
 
     private ArrayList<CourseSchedule> getCourseSchedule() {
+        // Hard coded data set
+        // Should move this to the CourseSchedule App and/or
         ArrayList<CourseSchedule> courseSchedule = new ArrayList<CourseSchedule>();
         courseSchedule.add(new CourseSchedule("Week 1",  "18 Feb", "Introduction & Android Fundamentals", "Android Studio, Git & App Basics", "-"));
         courseSchedule.add(new CourseSchedule("Week 2", "25 Feb", "Activities, Lifecycle & Intents", "Activities & Intents", "-"));

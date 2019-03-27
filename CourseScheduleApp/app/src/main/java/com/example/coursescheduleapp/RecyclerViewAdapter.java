@@ -1,7 +1,6 @@
 package com.example.coursescheduleapp;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,13 +16,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Context mContext;
 
     public RecyclerViewAdapter(ArrayList<CourseSchedule> courseSchedule, Context mContext) {
+        // Instantiates the adapter wit two parameters: the dataset and the context
         this.courseSchedule = courseSchedule;
         this.mContext = mContext;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
-        // THis is the method that is responsible for inflating the view
+        // This is the method that is responsible for inflating the view
+        // Actually identifies the layout to be used inside of the RecyclerView
         // This is what is actually recycling the viewHolder
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list_item, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
@@ -32,6 +33,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
+        // This actually changes the contents of the Layout inside the RecyclerView
         Log.d(TAG, "onBindViewHolder: called position #" + position);
         viewHolder.scheduleLectureTopic.setText(courseSchedule.get(position).getLectureTopic());
         viewHolder.scheduleLabTopic.setText(courseSchedule.get(position).getLabTopic());
