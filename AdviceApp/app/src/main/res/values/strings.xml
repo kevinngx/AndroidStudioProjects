@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AdviceApp</string>
+    <string name="Get_Advice_Button">Click for Advice!</string>
+</resources>
